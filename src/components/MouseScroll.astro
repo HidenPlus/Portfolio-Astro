@@ -1,0 +1,56 @@
+<div class="mouse-scroll">
+    <a href="#about">
+        <img
+            src="/mouse_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Mouse Icon"
+            class="mouse-icon"
+        />
+    </a>
+    <a href="#about">
+        <img
+            src="keyboard_double_arrow_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Arrow Icon"
+            class="arrow-icon"
+        />
+    </a>
+</div>
+
+<style is:inline>
+    @keyframes animateScrollMouse {
+        0% {
+            transform: rotateZ(90deg) translateX(0);
+        }
+
+        50% {
+            transform: rotateZ(90deg) translateX(15px);
+        }
+
+        100% {
+            transform: rotateZ(90deg) translateX(0);
+        }
+    }
+
+    .mouse-scroll {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 40px;
+        width: 100%;
+        z-index: 1;
+
+        .mouse-icon,
+        .arrow-icon {
+            width: 30px;
+        }
+
+        .arrow-icon {
+            transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+            animation-duration: 1.5s;
+            animation-name: animateScrollMouse;
+            animation-iteration-count: infinite;
+        }
+    }
+</style>

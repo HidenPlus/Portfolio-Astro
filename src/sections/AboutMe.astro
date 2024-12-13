@@ -1,0 +1,86 @@
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-me-items">
+        <div class="about-me-items__item">
+            <h3>Experience</h3>
+            <p>
+                My journey as a developer began in 2021, working on web and
+                mobile applications, along with backend optimizations and
+                endpoint development, as well as designing and optimizing NoSQL
+                and SQL databases. Currently, I have 3 years of experience
+                specializing in eCommerce and CMS platforms. I am committed to
+                delivering professional results, meeting deadlines, and making
+                key decisions to provide the best solutions for my clients.
+            </p>
+        </div>
+        <div class="about-me-items__item">
+            <h3>Hobbies</h3>
+            <p>
+                I am passionate about technology and video games. My interest
+                began at the age of 16 through tech-focused channels on the
+                internet. My first projects included basic HTML mockups and
+                simple JavaScript interactions.
+            </p>
+        </div>
+        <div class="about-me-items__item">
+            <h3>Future Goals</h3>
+            <p>
+                I aim to continue growing as a developer, deepening my expertise
+                in eCommerce and CMS platforms, particularly in Shopify. My
+                focus is on mastering advanced customizations, optimizing
+                performance, and leveraging emerging technologies to provide
+                innovative solutions. Additionally, I plan to strengthen my
+                technical English skills and expand my capabilities in technical
+                interviews and collaboration on international projects.
+            </p>
+        </div>
+    </div>
+    <div class="decorations">
+        <div class="decoration-item decoration-item--1"></div>
+    </div>
+</section>
+
+<style is:inline>
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0 40px;
+        padding-bottom: 40px;
+
+        .decoration-item {
+            z-index: 0;
+        }
+    }
+
+    #about .about-me-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1044px;
+        text-align: center;
+        z-index: 1;
+
+        .about-me-items__item {
+            max-width: 250px;
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--secondaryColorLightBlue);
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primaryColorGreen);
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+</style>

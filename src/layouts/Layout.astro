@@ -1,0 +1,154 @@
+---
+import Header from "../components/Header.astro";
+import SocialFixed from "../components/SocialFixed.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Yojhan Atuesta - Dev 💻</title>
+	</head>
+	<body>
+		<style is:global>
+			* {
+				--primaryColorBlue: #004d73;
+				--primaryColorOrange: #ff6f61;
+				--primaryColorGreen: #92b558;
+				--primaryColorWhite: #f9f9f9;
+				--secondaryColorBlue: #003b5a;
+				--secondaryColorGreen: #a9c46b;
+				--secondaryColorLightBlue: #e1eef3;
+				--secondaryColorGray: #d6d6d6;
+				--white: #ffffff;
+				--black: #000000;
+				--sSpacingDesktop: 40px;
+				--sSpacingMobile: 16px;
+				--pSpacing: 16px;
+				--mWidthDesktop: 1044px;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Regular.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Light.woff") format("woff");
+				font-weight: 300;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Medium.woff") format("woff");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-SemiBold.woff") format("woff");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Poppins";
+				src: url("/fonts/Poppins-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			html,
+			body {
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				background-color: var(--primaryColorBlue);
+				scroll-behavior: smooth;
+			}
+			header,
+			footer {
+				height: fit-content;
+			}
+
+			main {
+				flex: 1;
+			}
+			h1,
+			h2,
+			h4,
+			h5,
+			h6,
+			p,
+			a,
+			span,
+			div {
+				font-family: "Quicksand", sans-serif;
+			}
+			h2 {
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 100%;
+				color: var(--primaryColorWhite);
+			}
+			h3 {
+				font-family: "Poppins", sans-serif;
+				font-weight: 700;
+				font-size: 24;
+				line-height: 100%;
+				color: var(--primaryColorGreen);
+			}
+			.decoration-item {
+				width: 350px;
+				height: 350px;
+				border-radius: 50%;
+				background-color: var(--secondaryColorGreen);
+				filter: blur(10rem);
+				z-index: 0;
+			}
+			.btn {
+				background-color: transparent;
+				border: 2px solid var(--secondaryColorBlue);
+				color: var(--secondaryColorBlue);
+				font-family: "Quicksand", sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 100%;
+				padding: 14px 12px;
+				width: fit-content;
+
+				&:hover,
+				&:focus-visible {
+					background-color: var(--primaryColorBlue);
+					color: var(--secondaryColorGray);
+					border: 2px solid var(--primaryColorBlue);
+					transition: all 0.4s ease-in-out;
+				}
+			}
+
+			.btn.btn--secondary {
+				background-color: var(--secondaryColorBlue);
+				color: var(--primaryColorWhite);
+			}
+		</style>
+		<Header />
+		<main><slot /></main>
+		<SocialFixed />
+		<footer>Yojhan Atuesta</footer>
+	</body>
+</html>

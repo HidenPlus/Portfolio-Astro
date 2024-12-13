@@ -1,0 +1,71 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<section id="projects" class="projects-section">
+    <h2>Projects I Have Worked With</h2>
+
+    <div class="projects-container">
+        <ProjectCard
+            title="Birdsong App"
+            image="/tablet1.webp"
+            imageAlt="Tablet Birdsong App"
+            stackList="React Native, ReactJS, MongoDB, Loopback4"
+            description="The Birdsong App is a tablet application that allows seniors to stay connected with their loved ones, providing the opportunity to give them entertainment methods while keeping in touch with them."
+            url="https://birdsonglife.com/"
+        />
+        <ProjectCard
+            title="TrackItUp App"
+            image="/lateral-1.png"
+            imageAlt="TrackItUp App In Mobile Devices"
+            stackList="React Native, ReactJS, MongoDB, Loopback4"
+            description="The TrackItUp application allows users to keep track of their routes, create events and competitions based on metrics such as speed, elevation and strength by taking this data from third-party APIs such as Garmin."
+            url="https://trackitup.co/es/inicio/"
+        />
+        <ProjectCard
+            title="PlaceDuJour"
+            image="/placedujour.png"
+            imageAlt="PlaceDuJour Mobile Version ScreenShot"
+            stackList="HTML, SASS, Javascript, Liquid"
+            description="The PlaceDuJour project is an eCommerce focused on the sale of women's clothing using functionalities such as sidecart, colour and size variant selector, multi-language and location."
+            url="placedujour.fr"
+        />
+        <ProjectCard
+            title="Dazzle Dry"
+            image="/dazzledry.png"
+            imageAlt="Dazzle Dry Mobile Version ScreenShot"
+            stackList="HTML, SASS, Javascript, Liquid, Shopify Functions"
+            description="The Dazzle Dry website is an online shop specialising in the sale of cosmetic products focused on nail polish and its derivatives."
+            url="dazzledry.com"
+        />
+    </div>
+</section>
+
+<style is:inline>
+    .projects-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        padding: 0 40px;
+        padding-bottom: 40px;
+        z-index: 1;
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1400px;
+
+            .project-card {
+                width: calc(50% - 16px);
+            }
+        }
+    }
+</style>

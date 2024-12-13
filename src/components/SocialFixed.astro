@@ -1,0 +1,29 @@
+<div class="social-fixed">
+    <a href="https://www.linkedin.com/in/yojhanatuesta" title="LinkedIn">
+        <img src="/linkedin-svgrepo-com.svg" />
+    </a>
+    <a href="mailto:aatuesta00@gmail.com" title="Email">
+        <img src="/mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+    </a>
+</div>
+
+<style is:inline>
+    .social-fixed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        position: fixed;
+        bottom: 0;
+        margin-left: 5px;
+        z-index: 2;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 160px;
+            width: 4px;
+            background: var(--primaryColorGreen);
+        }
+    }
+</style>

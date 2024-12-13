@@ -1,0 +1,97 @@
+---
+import SkillItem from "../components/SkillItem.astro";
+---
+
+<section id="skill" class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skill-container">
+        <h3>FRONT-END</h3>
+        <div class="skill-container__items">
+            <SkillItem>HTML</SkillItem>
+            <SkillItem>CSS</SkillItem>
+            <SkillItem>SASS</SkillItem>
+            <SkillItem>Javascript (ES6+, AJAX)</SkillItem>
+            <SkillItem>Shopify</SkillItem>
+            <SkillItem>Figma</SkillItem>
+            <SkillItem>Wordpress</SkillItem>
+            <SkillItem>Webpack</SkillItem>
+            <SkillItem>Gulp</SkillItem>
+            <SkillItem>Shopify Liquid</SkillItem>
+            <SkillItem>React JS</SkillItem>
+            <SkillItem>Redux</SkillItem>
+            <SkillItem>React Native</SkillItem>
+        </div>
+    </div>
+    <div class="skill-container">
+        <h3>BACK-END</h3>
+        <div class="skill-container__items">
+            <SkillItem>Node.js</SkillItem>
+            <SkillItem>Express</SkillItem>
+            <SkillItem>Nest.JS</SkillItem>
+            <SkillItem>Loopback4</SkillItem>
+            <SkillItem>SQL</SkillItem>
+            <SkillItem>MongoDB</SkillItem>
+            <SkillItem>Restful APIs</SkillItem>
+            <SkillItem>
+                Shopify Plus (Checkout customizations, Shopify Functions)
+            </SkillItem>
+        </div>
+    </div>
+    <div class="skill-container">
+        <h3>UTILS</h3>
+        <div class="skill-container__items">
+            <SkillItem>SEO</SkillItem>
+            <SkillItem>Github</SkillItem>
+            <SkillItem>Gitlab</SkillItem>
+            <SkillItem>Docker</SkillItem>
+            <SkillItem>Performance Optimization</SkillItem>
+            <SkillItem>Figma</SkillItem>
+            <SkillItem>Cypress</SkillItem>
+        </div>
+    </div>
+    <div class="decorations">
+        <div class="decoration-item decoration-item--2"></div>
+    </div>
+</section>
+
+<style is:inline>
+    .skills-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .decoration-item--2 {
+            z-index: 0;
+            bottom: 40%;
+        }
+    }
+
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 1;
+        padding: 0 40px;
+        padding-bottom: 40px;
+
+        .skill-container__items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+import H1 from "../components/H1.astro";
+---
+
+<header>
+    <H1> <a href="/">Yojhan Atuesta</a> </H1>
+    <nav>
+        <ul>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style is:inline>
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--sSpacingDesktop);
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        color: var(--primaryColorWhite);
+    }
+
+    header nav ul li {
+        position: relative;
+        font-size: 28px;
+        font-weight: 700;
+        z-index: 1;
+
+        a::after {
+            content: "";
+            position: absolute;
+            display: none;
+            width: 100%;
+            top: 70%;
+            height: 15px;
+            background-color: var(--primaryColorGreen);
+            filter: blur(20px);
+            z-index: 0;
+        }
+
+        a:hover::after {
+            display: block;
+        }
+        a:focus-visible::after {
+            display: block;
+        }
+    }
+</style>

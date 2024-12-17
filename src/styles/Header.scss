@@ -1,0 +1,101 @@
+@use "./mixins.scss" as mixins;
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--sSpacingDesktop);
+    position: relative;
+
+    .nav-mobile {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        background-color: var(--primaryColorBlue);
+        z-index: 6;
+        left: 100%;
+        top: 0;
+        padding-bottom: 40px;
+        transition: all 0.2s ease;
+
+        &[aria-hidden="false"] {
+            left: 0;
+        }
+
+        .nav-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            p {
+                font-weight: 300;
+                font-size: 32px;
+                line-height: 100%;
+                color: var(--primaryColorWhite);
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .menu-button {
+        display: none;
+    }
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    color: var(--primaryColorWhite);
+}
+
+header nav ul li {
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    z-index: 1;
+
+    a::after {
+        content: "";
+        position: absolute;
+        display: none;
+        width: 100%;
+        top: 70%;
+        height: 15px;
+        background-color: var(--primaryColorGreen);
+        filter: blur(20px);
+        z-index: 0;
+    }
+
+    a:hover::after {
+        display: block;
+    }
+    a:focus-visible::after {
+        display: block;
+    }
+}
+
+@include mixins.mobile() {
+    header {
+        .nav-desktop {
+            display: none;
+        }
+
+        .nav-mobile {
+            display: block;
+        }
+
+        .menu-button {
+            display: block;
+        }
+    }
+}

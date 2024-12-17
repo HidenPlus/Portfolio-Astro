@@ -1,0 +1,76 @@
+@use "./mixins.scss" as mixins;
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .contact-mobile {
+        display: none;
+    }
+
+    .contact-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1044px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: calc(50% - 20px);
+    }
+
+    .contact-info p {
+        font-family: "Quicksand";
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--secondaryColorLightBlue);
+        padding: 0 32px;
+    }
+
+    .contact-form form > div {
+        position: relative;
+        justify-content: center !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+@include mixins.mobile() {
+    #contact {
+        margin-top: 40px;
+
+        .contact-mobile {
+            display: block;
+        }
+
+        .contact-desktop {
+            display: none;
+        }
+    }
+
+    #contact .contact-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact .contact-info,
+    #contact .contact-form {
+        width: 100%;
+    }
+}

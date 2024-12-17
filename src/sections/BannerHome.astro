@@ -1,9 +1,10 @@
 ---
 import Photo from "../components/Photo.astro";
 import MouseScroll from "../components/MouseScroll.astro";
+import "../styles/Banner.scss";
 ---
 
-<section class="banner-section">
+<section data-aos="fade-down" class="banner-section">
     <div class="banner">
         <p class="banner__intro">Hello! I am</p>
         <p class="banner__name">Yojhan Atuesta</p>
@@ -24,56 +25,3 @@ import MouseScroll from "../components/MouseScroll.astro";
     </div>
     <MouseScroll />
 </section>
-
-<style is:inline>
-    .banner-section {
-        position: relative;
-        display: grid;
-        grid-template-columns: 2fr 0.5fr;
-        padding: var(--sSpacingDesktop);
-        justify-content: space-between;
-        align-items: start;
-        min-height: calc(100vh - 122px);
-    }
-    .banner-section .banner {
-        position: relative;
-        max-width: 800px;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 150%;
-        z-index: 1;
-
-        .banner__intro {
-            color: var(--secondaryColorGray);
-        }
-        .banner__name {
-            color: var(--secondaryColorGreen);
-        }
-        .banner__role {
-            color: var(--secondaryColorLightBlue);
-        }
-        .banner__desc {
-            color: var(--white);
-            line-height: 100%;
-        }
-        .btn {
-            display: block;
-            margin-top: var(--pSpacing);
-        }
-    }
-
-    section .decorations {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        .decoration-item--1 {
-            position: absolute;
-            left: 0%;
-            bottom: 30%;
-        }
-        .decoration-item--2 {
-            position: absolute;
-            right: 0%;
-        }
-    }
-</style>

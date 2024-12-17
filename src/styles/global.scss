@@ -1,0 +1,72 @@
+html,
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primaryColorBlue);
+    scroll-behavior: smooth;
+}
+header,
+footer {
+    height: fit-content;
+}
+
+main {
+    flex: 1;
+}
+h1,
+h2,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+    font-family: "Quicksand", sans-serif;
+}
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--primaryColorWhite);
+}
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24;
+    line-height: 100%;
+    color: var(--primaryColorGreen);
+}
+.decoration-item {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: var(--secondaryColorGreen);
+    filter: blur(10rem);
+    z-index: 0;
+}
+.btn {
+    background-color: transparent;
+    border: 2px solid var(--secondaryColorBlue);
+    color: var(--secondaryColorBlue);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 14px 12px;
+    width: fit-content;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--primaryColorBlue);
+        color: var(--secondaryColorGray);
+        border: 2px solid var(--primaryColorBlue);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+.btn.btn--secondary {
+    background-color: var(--secondaryColorBlue);
+    color: var(--primaryColorWhite);
+}

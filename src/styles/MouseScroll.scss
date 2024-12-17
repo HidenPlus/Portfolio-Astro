@@ -1,0 +1,45 @@
+@use "./mixins.scss" as mixins;
+
+@keyframes animateScrollMouse {
+    0% {
+        transform: rotateZ(90deg) translateX(0);
+    }
+
+    50% {
+        transform: rotateZ(90deg) translateX(15px);
+    }
+
+    100% {
+        transform: rotateZ(90deg) translateX(0);
+    }
+}
+
+.mouse-scroll {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    width: 100%;
+    z-index: 1;
+
+    .mouse-icon,
+    .arrow-icon {
+        width: 30px;
+    }
+
+    .arrow-icon {
+        transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+        animation-duration: 1.5s;
+        animation-name: animateScrollMouse;
+        animation-iteration-count: infinite;
+    }
+}
+
+@include mixins.mobile() {
+    .mouse-scroll {
+        display: none;
+    }
+}

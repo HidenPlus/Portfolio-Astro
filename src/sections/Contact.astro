@@ -1,14 +1,25 @@
+---
+import "../styles/Contact.scss";
+---
+
 <section id="contact" class="contact-section">
     <h2>Want to Connect</h2>
     <div class="contact-items">
         <div class="contact-info">
             <h3>CONTACT ME</h3>
-            <p>
+            <p class="contact-desktop">
                 If you want to contact me, you can do it through linkedin or
                 mail, you can find it in the bottom left bar of the page, you
                 will be redirected to my contact means. If you would like to be
                 contacted by me, you can do so by filling in the form on the
                 right, the information you enter will be kept confidential.
+            </p>
+            <p class="contact-mobile">
+                If you want to contact me, you can do it through linkedin or
+                mail, you can find it in the menu items at the header, you will
+                be redirected to my contact means. If you would like to be
+                contacted by me, you can do so by filling in the form at the
+                bottom, the information you enter will be kept confidential.
             </p>
         </div>
         <div class="contact-form">
@@ -25,52 +36,3 @@
     script.async = true;
     document?.getElementById("contact")?.appendChild(script);
 </script>
-
-<style is:inline>
-    #contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-
-        h3 {
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .contact-items {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 1044px;
-            text-align: center;
-            gap: 40px;
-        }
-
-        .contact-info,
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: calc(50% - 20px);
-        }
-
-        .contact-info p {
-            font-family: "Quicksand";
-            font-weight: 400;
-            font-size: 16px;
-            color: var(--secondaryColorLightBlue);
-            padding: 0 32px;
-        }
-
-        .contact-form form > div {
-            position: relative;
-            justify-content: center !important;
-            align-items: stretch !important;
-            width: 100% !important;
-            text-align: center;
-        }
-    }
-</style>

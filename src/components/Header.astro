@@ -1,10 +1,9 @@
 ---
-import H1 from "../components/H1.astro";
 import "../styles/Header.scss";
 ---
 
 <header>
-    <H1> <a href="/">Yojhan Atuesta</a> </H1>
+    <h1><a href="/">Yojhan Atuesta</a></h1>
     <button class="menu-button" type="button" aria-label="Menu Toggle">
         <img src="/menu.svg" alt="Menu Icon" />
     </button>
@@ -47,3 +46,12 @@ import "../styles/Header.scss";
         });
     });
 </script>
+
+<style is:inline>
+    h1 {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 100%;
+        color: var(--primaryColorWhite);
+    }
+</style>

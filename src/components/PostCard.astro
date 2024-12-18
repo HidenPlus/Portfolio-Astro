@@ -1,0 +1,20 @@
+---
+import "../styles/ArticleCard.scss";
+const {
+    post: { frontmatter, ...post },
+} = Astro.props;
+---
+
+<li>
+    <a href={post.url} class="post-card">
+        <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+        <div class="post-card__info">
+            <h3>{frontmatter.title}</h3>
+            <date>{new Date(frontmatter.pubDate).toLocaleDateString()}</date>
+            <p class="post-card__description">{frontmatter.description}</p>
+            <p class="post-card__tags">
+                {frontmatter.tags.map((tag: string) => <span>{tag}</span>)}
+            </p>
+        </div>
+    </a>
+</li>

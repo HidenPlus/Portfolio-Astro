@@ -1,23 +1,38 @@
 ---
+import PostCard from "../components/PostCard.astro";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const pageTitle = "Mi blog de aprendizaje de Astro";
 ---
 
 <Layout>
-    <section class="blog-build">
-        <h1 style="text-align: center;">Blog In Construction</h1>
+    <section class="blog-articles">
+        <h2>Blog Articles</h2>
+        <ul>
+            {allPosts.map((post) => <PostCard post={post} />)}
+        </ul>
     </section>
 </Layout>
 
-<style>
-    .blog-build {
+<style is:inline>
+    .blog-articles {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         height: 100%;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            max-width: 1044px;
+            align-items: center;
+            justify-items: center;
+        }
     }
 </style>

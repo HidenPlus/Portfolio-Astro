@@ -1,0 +1,88 @@
+.article {
+    word-wrap: break-word;
+    margin: 0 auto;
+    padding: 1.5em;
+
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0.83em 0;
+    }
+
+    h3 {
+        font-size: 1.17em;
+        margin: 1em 0;
+    }
+
+    h4 {
+        font-size: 1em;
+        margin: 1.33em 0;
+    }
+
+    h5 {
+        font-size: 0.83em;
+        margin: 1.67em 0;
+    }
+
+    h6 {
+        font-size: 0.67em;
+        margin: 2.33em 0;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+
+    a {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+
+    span {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+
+    div {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    p,
+    span,
+    li,
+    date {
+        color: var(--white);
+    }
+
+    footer .tag {
+        margin-right: 8px;
+        color: var(--primaryColorWhite);
+        font-size: 1rem;
+        padding: 4px;
+        background-color: var(--primaryColorGreen);
+        border-radius: 4px;
+    }
+
+    .klaviyo-form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .article {
+        font-size: 125%;
+        max-width: 42em;
+    }
+}

@@ -1,9 +1,12 @@
 ---
+const { frontmatter } = Astro.props;
 import GlobalStyles from "../components/GlobalStyles.astro";
 import Header from "../components/Header.astro";
 import SocialFixed from "../components/SocialFixed.astro";
 import Footer from "../sections/Footer.astro";
+import Article from "../components/Article.astro";
 import "../styles/global.scss";
+import "../styles/Article.scss";
 import "aos/dist/aos.css";
 ---
 
@@ -30,7 +33,9 @@ import "aos/dist/aos.css";
 	</head>
 	<body>
 		<Header />
-		<main><slot /></main>
+		<main class="article">
+			<Article frontmatter={frontmatter}><slot /></Article>
+		</main>
 		<SocialFixed />
 		<Footer />
 		<script>

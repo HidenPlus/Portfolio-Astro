@@ -12,7 +12,7 @@ import "../styles/Header.scss";
 </style>
 
 <header>
-    <a href="/"><h1>Yojhan Atuesta</h1></a>
+    <h1><a href="/">Yojhan Atuesta</a></h1>
     <button class="menu-button" type="button" aria-label="Menu Toggle">
         <img src="/menu.svg" alt="Menu Icon" />
     </button>
@@ -24,7 +24,7 @@ import "../styles/Header.scss";
             <li><a href="/#projects">PROJECTS</a></li>
         </ul>
     </nav>
-    <nav class="nav-mobile" aria-hidden="true">
+    <nav class="nav-mobile nav-hidden">
         <div class="nav-top">
             <p><a href="/">Yojhan Atuesta</a></p>
             <button class="menu-button" type="button" aria-label="Menu Toggle">
@@ -47,10 +47,10 @@ import "../styles/Header.scss";
         button.addEventListener("click", () => {
             const parentNav = document.querySelector(".nav-mobile");
             console.log(button);
-            if (parentNav.getAttribute("aria-hidden") == "true") {
-                parentNav.setAttribute("aria-hidden", "false");
+            if (parentNav.classList.contains("nav-hidden")) {
+                parentNav.classList.add("nav-hidden");
             } else {
-                parentNav.setAttribute("aria-hidden", "true");
+                parentNav.classList.remove("nav-hidden");
             }
         });
     });

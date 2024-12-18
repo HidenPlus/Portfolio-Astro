@@ -2,8 +2,6 @@
 import Header from "../components/Header.astro";
 import SocialFixed from "../components/SocialFixed.astro";
 import Footer from "../sections/Footer.astro";
-import "../styles/variables.scss";
-import "../styles/fonts.scss";
 import "../styles/global.scss";
 import "aos/dist/aos.css";
 ---
@@ -27,6 +25,66 @@ import "aos/dist/aos.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Yojhan Atuesta - Dev 💻</title>
+		<style>
+			* {
+				--primaryColorBlue: #004d73;
+				--primaryColorOrange: #ff6f61;
+				--primaryColorGreen: #92b558;
+				--primaryColorWhite: #f9f9f9;
+				--secondaryColorBlue: #003b5a;
+				--secondaryColorGreen: #a9c46b;
+				--secondaryColorLightBlue: #e1eef3;
+				--secondaryColorGray: #d6d6d6;
+				--white: #ffffff;
+				--black: #000000;
+				--sSpacingDesktop: 40px;
+				--sSpacingMobile: 16px;
+				--pSpacing: 16px;
+				--mWidthDesktop: 1044px;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Regular.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Light.woff") format("woff");
+				font-weight: 300;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Medium.woff") format("woff");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-SemiBold.woff") format("woff");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Quicksand";
+				src: url("/fonts/Quicksand-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "Poppins";
+				src: url("/fonts/Poppins-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />

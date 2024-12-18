@@ -31,7 +31,7 @@
     src: url("/fonts/Quicksand-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 @font-face {
     font-family: "Poppins";

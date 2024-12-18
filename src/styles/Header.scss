@@ -14,13 +14,13 @@ header {
         width: 100vw;
         background-color: var(--primaryColorBlue);
         z-index: 6;
-        left: 100%;
+        left: 0;
         top: 0;
         padding-bottom: 40px;
         transition: all 0.2s ease;
 
-        &:not(.nav-hidden) {
-            left: 0;
+        &.nav-hidden {
+            left: 100%;
         }
 
         .nav-top {

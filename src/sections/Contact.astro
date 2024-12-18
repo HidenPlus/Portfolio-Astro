@@ -30,9 +30,11 @@ import "../styles/Contact.scss";
 </section>
 
 <script>
-    const script = document.createElement("script");
-    script.src = `https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VbgWEk`;
-    script.type = "text/javascript";
-    script.async = true;
-    document?.getElementById("contact")?.appendChild(script);
+    document.addEventListener("load", () => {
+        const script = document.createElement("script");
+        script.src = `https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VbgWEk`;
+        script.type = "text/javascript";
+        script.async = true;
+        document?.getElementById("contact")?.appendChild(script);
+    });
 </script>

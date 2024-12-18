@@ -19,7 +19,7 @@ header {
         padding-bottom: 40px;
         transition: all 0.2s ease;
 
-        &.nav-hidden {
+        &:not(.nav-hidden) {
             left: 0;
         }
 

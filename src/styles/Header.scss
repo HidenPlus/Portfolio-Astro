@@ -12,15 +12,26 @@ header {
         display: none;
         position: fixed;
         width: 100vw;
+        min-height: 100%;
         background-color: var(--primaryColorBlue);
         z-index: 6;
         left: 0;
         top: 0;
-        padding-bottom: 40px;
+        padding-bottom: 16px;
         transition: all 0.2s ease;
 
         &.nav-hidden {
             left: 100%;
+        }
+
+        .social-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            margin-top: auto;
+            margin-right: 8px;
         }
 
         .nav-top {
@@ -40,8 +51,9 @@ header {
         ul {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            flex: 1;
         }
     }
 
@@ -91,7 +103,8 @@ header nav ul li {
         }
 
         .nav-mobile {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
         .menu-button {

@@ -50,7 +50,6 @@
 
     div {
         font-size: 1em;
-        margin: 1em 0;
     }
 
     h1,
@@ -66,6 +65,11 @@
         color: var(--white);
     }
 
+    ul {
+        list-style: disc;
+        list-style-position: inside;
+    }
+
     footer .tag {
         margin-right: 8px;
         color: var(--primaryColorWhite);
@@ -75,8 +79,16 @@
         border-radius: 4px;
     }
 
-    .klaviyo-form {
-        width: 100%;
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .klaviyo-form {
+            padding: 0;
+            display: block;
+        }
     }
 }
 

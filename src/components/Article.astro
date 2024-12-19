@@ -19,7 +19,14 @@ const { frontmatter } = Astro.props;
             }
         </p>
 
-        {frontmatter.klaviyoForm && <div class="klaviyo-form-XBj8PN" />}
+        {
+            frontmatter.klaviyoForm && (
+                <div class="newsletter">
+                    <h3>Join To The Newsletter</h3>
+                    <div class="klaviyo-form-XBj8PN" />
+                </div>
+            )
+        }
     </footer>
 </article>
 

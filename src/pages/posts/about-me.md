@@ -11,7 +11,7 @@ tags: ["shopify", "developer", "personal"]
 klaviyoForm: true
 ---
 
-# Welcome to My Shopify Development Journey!
+## Welcome to My Shopify Development Journey!
 
 Hi there! I'm Yojhan, a passionate Shopify developer with over 2.5 years of experience in creating and customizing Shopify themes, integrating third-party APIs, and optimizing eCommerce performance. Throughout my journey, I've worked with a variety of tools and technologies, including Webpack, SASS, JavaScript, and Shopify Liquid.
 

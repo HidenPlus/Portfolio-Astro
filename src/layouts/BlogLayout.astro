@@ -18,17 +18,14 @@ import "aos/dist/aos.css";
 			name="viewport"
 			content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 		/>
-		<meta
-			name="description"
-			content="Discover the portfolio of Yojhan Atuesta, a skilled Shopify developer with expertise in Liquid, JavaScript, CSS, and performance optimization. Explore innovative e-commerce solutions and tailored integrations that elevate your online store."
-		/>
+		<meta name="description" content={frontmatter.description} />
 		<meta
 			name="google-site-verification"
 			content="Nf6PnEg1mEwzgKNMH5mXq4E9QEvobsh2IWfaibiUowo"
 		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Yojhan Atuesta - Dev 💻</title>
+		<title>Yojhan Atuesta - {frontmatter.title}</title>
 		<GlobalStyles />
 	</head>
 	<body>
